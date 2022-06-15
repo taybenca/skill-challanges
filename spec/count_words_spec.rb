@@ -2,7 +2,7 @@ require 'count_words'
 
 describe 'count_words' do 
   it "fails" do
-    expect {count_words("")}.to raise_error "There is no words to count"
+    expect {count_words("")}.to raise_error "There are no words to count"
   end
 
   it "Give a string and return the quantity of words" do

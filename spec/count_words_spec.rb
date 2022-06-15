@@ -1,6 +1,10 @@
 require 'count_words'
 
 describe 'count_words' do 
+  it "fails" do
+    expect {count_words("")}.to raise_error "There is no words to count"
+  end
+
   it "Give a string and return the quantity of words" do
     result = count_words("In this project you will build personal diary system")
     expect(result).to eq 9

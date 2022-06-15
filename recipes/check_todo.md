@@ -1,0 +1,52 @@
+# {{PROBLEM}} Method Design Recipe
+
+## 1. Describe the Problem
+
+As a user
+So that I can keep track of my tasks
+I want to check if a text includes the string #TODO.
+
+## 2. Design the Method Signature
+
+_Include the name of the method, its parameters, return value, and side effects._
+method: text_checker() it will checks if the text includes string #TODO 
+parameters: text
+return value: result = true or false
+side effects: N/A
+
+```ruby
+# EXAMPLE
+
+# `test_checker` will check if the text includes a string #TODO
+result = text_checker(text)
+text: a string (e.g. "#TODO - Do the dinner")
+result: true or false (e.g. true)
+
+# The method doesn't print anything or have any other side-effects
+```
+
+## 3. Create Examples as Tests
+
+_Make a list of examples of what the method will take and return._
+
+```ruby
+# EXAMPLE
+
+text_checker("") => fails
+text_checker("#TODO Do the dinner") => true 
+text_checker("#todo Do the dinner") => false 
+text_checker("Do the dinner #TODO") => true
+text_checker("# TODO Do the dinner") => false
+text_checker("TODO Do the dinner") => false
+
+```
+
+_Encode each example as a test. You can add to the above list as you go._
+
+## 4. Implement the Behaviour
+
+_After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
+
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+

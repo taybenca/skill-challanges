@@ -10,4 +10,9 @@ describe 'make_snippet' do
     all_words = make_snippet("I love Ruby")
     expect(all_words).to eq "I love Ruby..."
   end
+
+  it 'Nothing in the string' do
+    result = make_snippet("")
+    expect(result).to eq ""
+  end
 end

@@ -16,3 +16,32 @@ A test framework for use with Ruby. A test framework is a tool for writing and r
 ### Git
 A version control system for use with any programming language. In the industry software projects are changed by many people in small steps, and version control systems help us keep track of those changes.
 
+***
+
+## Important Guide
+
+````
+mkdir your-project-directory
+cd your-project-directory
+
+rvm get stable
+rvm use ruby --latest --install --default
+
+gem install bundler
+
+bundle init
+
+bundle add rspec
+
+rspec --init
+
+mkdir lib
+
+git init .
+git add .
+git commit -m "Project setup"
+
+git remote add origin YOUR_REMOTE_ADDRESS
+git branch -M main
+git push -u origin main
+````

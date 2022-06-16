@@ -6,7 +6,7 @@ describe 'count_words' do
   end
 
   it "Give a string and return the quantity of words" do
-    result = count_words("In this project you will build personal diary system")
+    result = count_words("The quick brown fox jumps over the lazy dog")
     expect(result).to eq 9
   end
 

@@ -15,6 +15,6 @@ class ToDo
   def delete(task_to_delete)
     fail "Nothing to delete" if task_to_delete.empty?
     @list.delete(task_to_delete)
-    @list
+    show
   end
 end

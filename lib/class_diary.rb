@@ -15,22 +15,29 @@ class Diary
   def count_words
     result = []
     @entries.each do |entry|
-      result << entry.count_words
+    result << entry.count_words
     end
     return result.sum
   end
 
   def reading_time(wpm) 
-    (count_words.to_f/2).ceil
+    (count_words.to_f/wpm).ceil
   end
 
   def find_best_entry_for_reading_time(wpm, minutes)
-        # `wpm` is an integer representing the number of words the user can read
-        # per minute.
-        # `minutes` is an integer representing the number of minutes the user
-        # has to read.
-    # Returns an instance of diary entry representing the entry that is closest 
-    # to, but not over, the length that the user could read in the minutes they
-    # have available given their reading speed.
+    possible_entries = []
+    count = 0
+    best_entry = nil
+    @entries.each do |entry|
+      if entry.count_words <= minutes * wpm
+        possible_entries << entry
+      end
+    end
+    possible_entries.each do |entry|
+      if entry.count_words > count
+        best_entry = entry
+      end
+    end
+    return best_entry
   end
 end

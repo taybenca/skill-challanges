@@ -63,5 +63,4 @@ describe "integrated todos" do
         todo_list.give_up!
         expect(todo_list.complete).to eq [todo1, todo2]
     end
-
 end

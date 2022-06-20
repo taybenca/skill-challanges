@@ -1,8 +1,6 @@
 class TodoList
     def initialize
       @todos = []
-      @completed = []
-      @incompleted = []
     end
   
     def add(todo)
